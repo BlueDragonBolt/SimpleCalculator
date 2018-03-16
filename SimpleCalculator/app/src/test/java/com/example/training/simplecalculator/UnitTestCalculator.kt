@@ -1,0 +1,101 @@
+package com.example.training.simplecalculator
+
+import org.junit.Test
+import org.junit.Assert
+
+/**
+ * Created by Training on 09/08/2017.
+ */
+class UnitTestCalculator {
+
+    val calculator : MainCalculate = MainCalculate()
+    var action : CalculatorFunction? = null
+
+    @Test(expected = Exception::class)
+    fun testsWorkDivide() {
+
+        action = getCalculationFunction( CalculatorFunction.Divide.name )
+
+        Assert.assertEquals(calculator.getCalculation("4", "0", action ), CALCULATE_ERROR_RESULT )
+
+        Assert.assertEquals(calculator.getCalculation("0", "0", action ), CALCULATE_ERROR_RESULT)
+
+        Assert.assertEquals(calculator.getCalculation("0", "5", action ), "0")
+
+        Assert.assertEquals(calculator.getCalculation("4", "4", action ), "1")
+
+        Assert.assertEquals(calculator.getCalculation("12.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000", "2.000000000000000000", action ), "6")
+
+        Assert.assertEquals(calculator.getCalculation("999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999", "0.00000000000000000000000000000000001", action ), CALCULATE_ERROR_RESULT)
+
+    }
+
+    @Test(expected = Exception::class)
+    fun testsWorkMultiply() {
+
+        action = getCalculationFunction( CalculatorFunction.Multiply.name )
+
+        Assert.assertEquals(calculator.getCalculation("4", "0", action ), "0" )
+
+        Assert.assertEquals(calculator.getCalculation("0", "0", action ), "0")
+
+        Assert.assertEquals(calculator.getCalculation("0", "5", action ), "0")
+
+        Assert.assertEquals(calculator.getCalculation("4", "4", action ), "16")
+
+        Assert.assertEquals(calculator.getCalculation("12.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000", "2.000000000000000000", action ), "24")
+
+
+        Assert.assertEquals(calculator.getCalculation("999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999", "99999999999999999999999999999999999999999999999999", action ), CALCULATE_ERROR_RESULT)
+
+
+    }
+
+    @Test(expected = Exception::class)
+    fun testsAdd() {
+
+        action = getCalculationFunction( CalculatorFunction.Add.name )
+
+        Assert.assertEquals(calculator.getCalculation("4", "0", action ), "4" )
+
+       Assert.assertEquals(calculator.getCalculation("0", "0", action ), "0")
+
+        Assert.assertEquals(calculator.getCalculation("4", "4", action ), "8")
+
+        Assert.assertEquals(calculator.getCalculation("12.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000", "2.000000000000000000", action ), "14")
+
+        Assert.assertEquals(calculator.getCalculation("999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999", "0.00000000000000000000000000000000001", action ), CALCULATE_ERROR_RESULT)
+
+        Assert.assertEquals(calculator.getCalculation("2.00001", "2.0000", action ), "4.00001")
+
+       Assert.assertEquals(calculator.getCalculation("2.000009", "2.000001", action ), "4.00001")
+
+        Assert.assertEquals(calculator.getCalculation("2.000004", "2.000004", action ), "4.00001")
+
+
+    }
+
+    @Test(expected = Exception::class)
+    fun testsSubtract() {
+
+        action = getCalculationFunction( CalculatorFunction.Subtract.name )
+
+        Assert.assertEquals(calculator.getCalculation("4", "0", action ), "4" )
+
+        Assert.assertEquals(calculator.getCalculation("0", "0", action ), "0")
+
+        Assert.assertEquals(calculator.getCalculation("4.0", "4.0", action ), "0")
+
+        Assert.assertEquals(calculator.getCalculation("12.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000", "2.000000000000000000", action ), "10")
+
+        Assert.assertEquals(calculator.getCalculation("999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999", "0", action ), CALCULATE_ERROR_RESULT)
+
+        Assert.assertEquals(calculator.getCalculation("2.00001", "2.0000", action ), "0.00001")
+
+        Assert.assertEquals(calculator.getCalculation("2.000001", "2.000009", action ), "-0.00001")
+
+        Assert.assertEquals(calculator.getCalculation("2.000004", "2.000004", action ), "0")
+
+
+    }
+}

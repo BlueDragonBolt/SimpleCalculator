@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "C:\\Users\\Training\\AndroidStudioProjects\\SimpleCalculator\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media.xml",
+        "source": "C:\\Users\\Training\\.android\\build-cache\\7fca2c14f8649b0f8c773146089f368d55bac5c6\\output\\res\\layout-v11\\notification_template_big_media.xml"
+    },
+    {
+        "merged": "C:\\Users\\Training\\AndroidStudioProjects\\SimpleCalculator\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_media_action.xml",
+        "source": "C:\\Users\\Training\\.android\\build-cache\\7fca2c14f8649b0f8c773146089f368d55bac5c6\\output\\res\\layout-v11\\notification_media_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\Training\\AndroidStudioProjects\\SimpleCalculator\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_custom.xml",
+        "source": "C:\\Users\\Training\\.android\\build-cache\\7fca2c14f8649b0f8c773146089f368d55bac5c6\\output\\res\\layout-v11\\notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "C:\\Users\\Training\\AndroidStudioProjects\\SimpleCalculator\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_media_cancel_action.xml",
+        "source": "C:\\Users\\Training\\.android\\build-cache\\7fca2c14f8649b0f8c773146089f368d55bac5c6\\output\\res\\layout-v11\\notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\Training\\AndroidStudioProjects\\SimpleCalculator\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_narrow.xml",
+        "source": "C:\\Users\\Training\\.android\\build-cache\\7fca2c14f8649b0f8c773146089f368d55bac5c6\\output\\res\\layout-v11\\notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "C:\\Users\\Training\\AndroidStudioProjects\\SimpleCalculator\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_narrow_custom.xml",
+        "source": "C:\\Users\\Training\\.android\\build-cache\\7fca2c14f8649b0f8c773146089f368d55bac5c6\\output\\res\\layout-v11\\notification_template_big_media_narrow_custom.xml"
+    }
+]
